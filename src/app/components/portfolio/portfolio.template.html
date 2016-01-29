@@ -71,7 +71,6 @@
                         <li data-ng-repeat="item in portfolio.portfolioItem.managerAllocations track by $index" class="row list-group-item flex flex-center-vertical">
                             <div class="flex-one">
                                 <h4>{{item.managerName}}</h4>
-                                <p>{{item.managerCode}}</p>
                             </div>
                             <div>
                                 <i data-ng-click="portfolio.removeManagerItem(item)" class="glyphicon glyphicon-remove-circle"></i>
@@ -98,7 +97,6 @@
             <li data-ng-repeat="item in portfolio.portfolioItems track by $index" class="row list-group-item flex flex-center-vertical">
                 <div class="flex-one">
                     <h4>{{item.portfolioName}}</h4>
-                    <p>{{item.asOfDate}}</p>
                 </div>
                 <div>
                     <i data-ng-click="portfolio.removePortfolioItem(item)" class="glyphicon glyphicon-remove-circle"></i>

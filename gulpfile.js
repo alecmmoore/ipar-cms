@@ -1,5 +1,10 @@
 var gulp = require('gulp');
 
+//--CSS DEPENDENCIES
+var sass = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
+
+
 //--EXTERNAL(NPM) DEPENDENCIES
 var bower = require('gulp-bower');
 var bowerFiles = require('bower-files');
@@ -18,6 +23,17 @@ var config = {
     build_destination: './bin',
     temp_destination: './bin'
 };
+
+gulp.task('sass', function () {
+    return gulp.src('./src/app/css/**/*.scss')
+        .pipe(autoprefixer())
+        .pipe(sass.sync().on('error', sass.logError))
+        .pipe(gulp.dest('./src/app/css'));
+});
+
+gulp.task('sass:watch', function () {
+    gulp.watch('./src/app/css/**/*.scss', ['sass']);
+});
 
 gulp.task('inject-app', function () {
     var target = gulp.src('./src/app/index.html');
