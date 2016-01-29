@@ -1,0 +1,39 @@
+{
+  "name": "sas-seed",
+  "version": "0.0.1",
+  "description": "Sixth Ave Studios Seed Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alecmmoore/sas-seed.git"
+  },
+  "keywords": [
+    "sas"
+  ],
+  "author": "Sixth Ave Studios",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alecmmoore/sas-seed"
+  },
+  "homepage": "https://github.com/alecmmoore/sas-seed",
+  "dependencies": {
+    "angular": "^1.4.8",
+    "angular-resource": "^1.4.8",
+    "angular-route": "^1.4.8",
+    "angular-sanitize": "^1.4.8",
+    "bootstrap": "^3.3.6",
+    "lodash": "^3.10.1"
+  },
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.0",
+    "gulp-inject": "^3.0.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-replace": "^0.5.4",
+    "gulp-uglify": "^1.5.1",
+    "jshint": "^2.8.0"
+  }
+}

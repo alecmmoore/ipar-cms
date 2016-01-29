@@ -1,0 +1,27 @@
+{
+  "name": "SAS Seed",
+  "version": "0.0.1",
+  "description": "Sixth Ave Studios Seed",
+  "authors": [
+    "Sixth Ave Studios"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/alecmmoore/sas-seed",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "devDependencies": {
+    "angular-mocks": "~1.2.24"
+  },
+  "dependencies": {
+    "angular": "~1.2.24",
+    "bootstrap": "~3.1.1",
+    "jquery": "~2.1.0",
+    "angular-route": "~1.2.24",
+    "angular-animate": "~1.2.24",
+    "angular-sanitize": "~1.2.24",
+    "lodash": "~3.10.0"
+  }
+}

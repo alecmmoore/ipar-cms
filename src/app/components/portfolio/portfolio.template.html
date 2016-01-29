@@ -1,0 +1,110 @@
+<div class="container-fluid" data-ng-controller="portfolioController as portfolio">
+    <div class="col-sm-6">
+        <h1>Add A Portfolio Item</h1>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label>Portfolio Name</label>
+                    <input data-ng-model="portfolio.portfolioItem.portfolioName" type="text" class="form-control" required placeholder="Portfolio Name"/>
+                </div>
+                <div class="form-group">
+                    <label>Code</label>
+                    <input data-ng-model="portfolio.portfolioItem.code" type="text" class="form-control" required placeholder="Code"/>
+                </div>
+                <div class="form-group">
+                    <label>As Of Date</label>
+                    <input data-ng-model="portfolio.portfolioItem.asOfDate" type="date" class="form-control" required placeholder="As Of Date"/>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label>Scale</label>
+                    <input data-ng-model="portfolio.portfolioItem.scale" type="number" class="form-control" required placeholder="Scale"/>
+                </div>
+                <div class="form-group">
+                    <label>Target</label>
+                    <input data-ng-model="portfolio.portfolioItem.target" type="text" class="form-control" required placeholder="Target"/>
+                </div>
+                <div class="form-group">
+                    <label>Innovation</label>
+                    <input data-ng-model="portfolio.portfolioItem.innovation" type="text" class="form-control" required placeholder="Innovation"/>
+                </div>
+            </div>
+        </div>
+        <div class="well">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="row">
+                        <h4 class="col-sm-12">Add A Manager</h4>
+                    </div>
+                    <div class="form-group">
+                        <label>Manager Name</label>
+                        <input data-ng-model="portfolio.managerAllItem.managerName" type="text" class="form-control" required placeholder="Manager Name"/>
+                    </div>
+                    <div class="form-group">
+                        <label>Manager Code</label>
+                        <input data-ng-model="portfolio.managerAllItem.managerCode" type="text" class="form-control" required placeholder="Manager Code"/>
+                    </div>
+                    <div class="form-group">
+                        <label>Intention</label>
+                        <input data-ng-model="portfolio.managerAllItem.intention" type="number" class="form-control" required placeholder="Intention"/>
+                    </div>
+                    <div class="form-group">
+                        <label>Market Value</label>
+                        <input data-ng-model="portfolio.managerAllItem.marketValue" type="text" class="form-control" required placeholder="Market Value"/>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <button data-ng-click="portfolio.addManagerItem(portfolio.managerAllItem)" type="button" class="btn btn-success btn-xs btn-block">Add Manager</button>
+                        </div>
+                        <div class="col-sm-6">
+                            <button data-ng-click="portfolio.clearManagerItem()" type="button" class="btn btn-danger btn-xs btn-block">Clear</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="row">
+                        <h4 class="col-sm-12">Manager Allocations List</h4>
+                    </div>
+                    <p data-ng-hide="!portfolio.portfolioItem.managerAllocations">Add a manager allocation item</p>
+                    <ul class="list-group">
+                        <li data-ng-repeat="item in portfolio.portfolioItem.managerAllocations track by $index" class="row list-group-item flex flex-center-vertical">
+                            <div class="flex-one">
+                                <h4>{{item.managerName}}</h4>
+                                <p>{{item.managerCode}}</p>
+                            </div>
+                            <div>
+                                <i data-ng-click="portfolio.removeManagerItem(item)" class="glyphicon glyphicon-remove-circle"></i>
+                                <i data-ng-click="portfolio.editManagerItem(item)" class="glyphicon glyphicon-edit"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <button data-ng-click="portfolio.addPortfolioItem(portfolio.portfolioItem)" type="button" class="btn btn-success btn-block">Add Portfolio Item</button>
+            </div>
+            <div class="col-sm-6">
+                <button data-ng-click="portfolio.clearAll()" type="button" class="btn btn-danger btn-block">Clear All</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <h1>Portfolio List</h1>
+        <p data-ng-hide="!portfolio.portfolioItems">Add a portfolio item</p>
+        <ul class="list-group">
+            <li data-ng-repeat="item in portfolio.portfolioItems track by $index" class="row list-group-item flex flex-center-vertical">
+                <div class="flex-one">
+                    <h4>{{item.portfolioName}}</h4>
+                    <p>{{item.asOfDate}}</p>
+                </div>
+                <div>
+                    <i data-ng-click="portfolio.removePortfolioItem(item)" class="glyphicon glyphicon-remove-circle"></i>
+                    <i data-ng-click="portfolio.editPortfolioItem(item)" class="glyphicon glyphicon-edit"></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
