@@ -3,9 +3,9 @@
 
 	angular
 		.module('sas.home')
-		.config(homeConfig);
+		.config(HomeConfig);
 
-	function homeConfig($routeProvider) {
+	function HomeConfig($routeProvider) {
 		$routeProvider
 			.when('/home', {
 				templateUrl: './components/home/home.template.html',

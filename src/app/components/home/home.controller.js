@@ -1,15 +1,13 @@
 (function() {
-
 	'use strict';
 
 	angular
 		.module('sas.home')
-		.controller('homeController', homeController);
+		.controller('homeController', HomeController);
 
-	function homeController() {
+	function HomeController() {
 		var vm = this;
 		vm.username = 'Sixth Ave Studios';
-
 	}
 
 })();

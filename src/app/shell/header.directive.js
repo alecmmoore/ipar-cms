@@ -14,7 +14,7 @@
 
 			},
 			link: link,
-			controller: sasHeaderController,
+			controller: SasHeaderController,
 			controllerAs: 'vm',
 			bindToController: true // because the scope is isolated
 		};
@@ -27,7 +27,7 @@
 
 		}
 
-		function sasHeaderController() {
+		function SasHeaderController() {
 			var vm = this;
 
 		}

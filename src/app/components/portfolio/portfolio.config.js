@@ -3,9 +3,9 @@
 
 	angular
 		.module('sas.portfolio')
-		.config(portfolioConfig);
+		.config(PortfolioConfig);
 
-	function portfolioConfig($routeProvider) {
+	function PortfolioConfig($routeProvider) {
 		$routeProvider
 			.when('/portfolio', {
 				templateUrl: './components/portfolio/portfolio.template.html',

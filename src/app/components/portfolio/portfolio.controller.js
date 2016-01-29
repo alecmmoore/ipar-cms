@@ -3,11 +3,13 @@
 
 	angular
 		.module('sas.portfolio')
-		.controller('portfolioController', portfolioController);
+		.controller('portfolioController', PortfolioController);
 
-	function portfolioController() {
+	function PortfolioController() {
 		var vm = this;
-		vm.portfolioItem = { managerAllocations: [] };
+		vm.portfolioItem = {
+			managerAllocations: []
+		};
 		vm.managerAllItem = {};
 		vm.portfolioItems = [];
 		vm.addPortfolioItem = addPortfolioItem;
@@ -56,7 +58,9 @@
 		}
 
 		function clearAll() {
-			vm.portfolioItem = { managerAllocations: [] };
+			vm.portfolioItem = {
+				managerAllocations: []
+			};
 			vm.managerAllItem = {};
 		}
 	}
